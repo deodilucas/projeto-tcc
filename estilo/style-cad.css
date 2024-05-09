@@ -1,0 +1,81 @@
+	div {
+		display: none;
+	}
+	body {
+		margin: 0%;
+		font-family: Merriweather;
+		color: #444;
+	}
+	.content {
+		height: 100vh;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 1fr 3fr;
+	}
+	.box {
+		padding: 20px;
+	}
+	.a {
+		grid-column: 1/3;
+		grid-row: 1;
+	}
+	.content-text {
+		margin-right: 20%;
+		margin-left: 20%;
+	}
+	h2 {
+		font-family: ;
+		font-weight: 800;
+		font-style: normal;
+		margin: 0%;
+		font-size: 25px;
+		color: black;
+	}
+	.txt {
+		margin-top: 0%;
+		font-family: Ubuntu;
+	}
+	.logo {
+		height: 30%;
+		float: right;
+	}
+	h2 {
+		color: black;
+	}
+	input {
+		padding: 1%;
+		background-color: #EFEFEF;
+		height: 25px;
+		width: 47%;
+		margin-right: 0.5%;
+		margin-top: 10px;
+		font-family: Ubuntu;
+		color: #444;
+		border: none;
+		border-radius: 5px;
+	}
+	form {
+		font-weight: 600;
+		width: 70%;
+	}
+	.bot {
+		font-family: Merriweather;
+		background-color: black;
+		color: white;
+		height: 30px;
+		font-weight: 600;
+		border: none;
+		padding: 2px;
+		width: 100%;
+	}
+	span {
+		align-items: center;
+		font-size: 1em;
+		color: #090A0D;
+		font-weight: 600;
+	}
+	.icone {
+		margin-right: 10px;
+		height: 20px;
+	}

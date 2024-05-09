@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="../ativos/icons/logov3.ico" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+	body {
+		margin: 0%;
+		font-family: Poppins;
+		color: #444;
+	}
+	.content {
+		height: 100vh;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 1fr 3fr;
+	}
+	.box {
+		padding: 20px;
+	}
+	.a {
+		grid-column: 1/3;
+		grid-row: 1;
+	}
+	.content-text {
+		margin-right: 20%;
+		margin-left: 20%;
+	}
+	h2 {
+		font-family: ;
+		font-weight: 800;
+		font-style: normal;
+		margin: 0%;
+		font-size: 25px;
+		color: black;
+	}
+	.txt {
+		margin-top: 0%;
+		font-family: Rubik;
+	}
+	.logo {
+		height: 30%;
+		float: right;
+	}
+	h2 {
+		font-weight: 600;
+		color: black;
+	}
+	input {
+		padding: 1%;
+		background-color: #EFEFEF;
+		height: 25px;
+		width: 47%;
+		margin-right: 0.5%;
+		margin-top: 10px;
+		font-family: Rubik;
+		color: #444;
+		border: none;
+		border-radius: 5px;
+	}
+	form {
+		font-weight: 600;
+		width: 70%;
+	}
+	.bot {
+		font-family: Poppins;
+		background-color: black;
+		color: white;
+		height: 30px;
+		font-weight: 600;
+		border: none;
+		padding: 2px;
+		width: 100%;
+		cursor: pointer;
+	}
+	span {
+		align-items: center;
+		font-size: 1em;
+		color: #090A0D;
+		font-weight: 600;
+	}
+	.icone {
+		margin-right: 10px;
+		height: 20px;
+	}
+	#form-log {
+		display: none;
+	}
+	.but {
+		font-weight: 500;
+		cursor: pointer;
+		font-family: Rubik;
+		font-size: 0.8em;
+	}
+	.but:hover {
+		color: #444;
+	}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="box a">
+			<img class="logo" src="../ativos/logo/logov3.svg" alt="">
+		</div>
+		<div class="box b">
+			<div class="content-text">
+				<h2 class="slogan">Valorize seu dinheiro!</h2>
+				<p class="txt sobre">Pyramids é sua plataforma totalmente gratuita onde você pode gerenciar cada momento financeiro.</p>
+				<span><img class="icone dash" src="../ativos/icons/dashboard.svg" alt="">Dashboard</span>
+				<p class="txt sobre">Veja tudo em um único lugar resumidamente e da maneira mais fácil.</p>
+				<span><img class="icone rel" src="../ativos/icons/Relatorio.svg" alt="">Relatório</span>
+				<p class="txt sobre">Veja relatórios em gráficos dinâmicos sobre sua atividade diárias, semanais ou mensais.</p>
+				<span><img class="icone plan" src="../ativos/icons/Planejamento.svg" alt="">Planejamento</span>
+				<p class="txt sobre">Crie metas e planeje e controle melhor sua vida financeira.</p>
+			</div>
+		</div>
+		<div class="box d">
+			<div id="form-cad">
+				<h2>Cadastre-se</h2>
+				<form name="cad" action="processar.php" method="POST" accept-charset="utf-8">
+					<input type="text" name="nome" placeholder="Nome completo" required>
+					<input type="date" name="nasc" value="" required><br>
+					<input type="text" name="email" placeholder="Email" required>
+					<input type="email" name="confemail" placeholder="Confirmar email" required><br>
+					<input type="password" name="senha" placeholder="Senha" minlength="8" required>
+					<input type="password" name="confsenha" placeholder="Confirmar senha" minlength="8" pattern="[a-zA-Z0-9]+" required><br>
+					<input class="bot" type="submit" value="Confirmar" onclick="return senha()"><br>
+					<center><span class="but" onclick="logar()" >Já tem cadastro!</span></center>
+				</form>
+			</div>
+			<div id="form-log">
+				<h2>Logar-se</h2>
+				<form action="autenticar.php" method="POST" accept-charset="utf-8">
+					<input type="email" name="email" placeholder="e-mail" required>
+					<input type="password" name="senha" placeholder="Digite a senha" minlength="" required>
+					<input class="bot" type="submit" name="Cadastrar" value="Confirmar"><br>
+					<center><span class="but" onclick="cadastar()">Ainda não tenho cadastro!</span></center>
+				</form>
+			</div>
+			<script>
+				function logar() {
+					document.getElementById('form-cad').style.display='none';
+					document.getElementById('form-log').style.display='block';
+				}
+				function cadastar() {
+					document.getElementById('form-cad').style.display='block';
+					document.getElementById('form-log').style.display='none';
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>
